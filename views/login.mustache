@@ -1,9 +1,41 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html>
+
 <head>
-  <body>
-    <h1>Awesome {{ username }}, you have successfully logged in!</h1>
-    <p>We see you have logged in {{ countLog }} times.
-      Thank you for checking us out!!</p>
-    <a href ="/logout">Please visit us again</a>
+  <title>Login Page</title>
+</head>
+
+<body>
+  <form action="/login" method="post">
+
+
+    <input type="text" placeholder="Please Enter Username" cols="40" name="username" id="theId" required="required" >
+
+    <input type="text" placeholder="Please Enter Password" cols="40" name="password" id="thePassword" required="required" >
+
+    <input type="submit" name="Login">
+
+  </form>
+
+  <p>Please register if you are a new user to our site</p>
+
+  <form  action="/reGistration" method="post">
+
+    <input type="submit" name="newUser" value="New User">
+
+  </form>
+
+<br><br>
+
+  <form action="/upCount" method="post">
+
+    <input type="submit"  value="Login Count!">
+
+    <br><br>
+
+    <p>Our countlog shows {{totalClicks}}, keep counting.</p>
+
+  </form>
+</body>
+
+</html>
